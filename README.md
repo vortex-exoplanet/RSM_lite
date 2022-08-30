@@ -43,10 +43,9 @@ A jupyter notebook tutorial as well as a dataset of 51 Eridani B is provided in 
 
 The package may be installed via pip install using the command:
 
->pip install https://github.com/chdahlqvist/RSMmap/releases/download/0.3.0/PyRSM.tar.gz
+>pip install https://github.com/vortex-exoplanet/RSM_lite/download/0.1.0/PyRSM_Lite.tar.gz
 
-A jupyter notebook tutorial as well as a test dataset of 51 Eridani B is provided [here](https://github.com/chdahlqvist/RSMmap/tree/master/Example). A post-processing pipeline for treating ADI or ADI+SDI sequences is also provided.
-
+A jupyter notebook tutorial as well as a test dataset of 51 Eridani B is provided [here](https://github.com/vortex-exoplanet/RSM_lite/tree/main/Example). A post-processing pipeline for treating ADI or ADI+SDI sequences is also provided.
 
 ##PyRSM class
 
