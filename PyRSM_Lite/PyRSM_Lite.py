@@ -66,8 +66,9 @@ import lmfit
 from scipy.optimize import minimize
 import math
 import warnings
-warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning) 
-from utils import (llsg_adisdi,loci_adisdi,do_pca_patch,_decompose_patch,
+warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning)
+ 
+from .utils import (llsg_adisdi,loci_adisdi,do_pca_patch,_decompose_patch,
 annular_pca_adisdi,NMF_patch,nmf_adisdi,LOCI_FM,KLIP_patch,perturb,KLIP,
 get_time_series,poly_fit,check_delta_sep ,rot_scale,Hessian)
 

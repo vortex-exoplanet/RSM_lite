@@ -4,7 +4,7 @@ import os
 from hciplot import plot_frames
 #import sys
 #sys.path.append('/.../')   # append the path to PyRSM if necessary
-from PyRSM_Lite import PyRSM 
+from PyRSM_Lite import PyRSM_Lite
 
 #Directory of dataset
 
@@ -37,7 +37,7 @@ PyRSM framework (no automated parametrization): Approach 1
 
 # Create PyRSM class object
 
-d=PyRSM.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4)
+d=PyRSM_Lite.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4)
 
 # Add a cube
 
@@ -69,7 +69,7 @@ plot_frames(d.probmap)
 
 # Create PyRSM class object
 
-d=PyRSM.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4)
+d=PyRSM_Lite.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4)
 
 # Add a cube
 
@@ -96,7 +96,7 @@ plot_frames(d.final_map)
 
 # Create PyRSM class object
 
-d=PyRSM.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4,inv_ang=True,trunc=10)
+d=PyRSM_Lite.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4,inv_ang=True,trunc=10)
 
 # Add a cube
 
@@ -140,7 +140,7 @@ d.save_parameters('/.../','SPHERE_51ERI_optimal_param')
 
 # Create PyRSM class object
 
-d=PyRSM.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4,inv_ang=True,trunc=10)
+d=PyRSM_Lite.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4,inv_ang=True,trunc=10)
 
 # Add a cube
 d.add_cube(psf,cube, angs)
@@ -172,11 +172,11 @@ plot_frames(d.final_map)
 """
 # PyRSM planet characterization algorithm
 """
-from vip_hci.metrics import cube_inject_companions
+from vip_hci.fm import cube_inject_companions
 
 # Create PyRSM class object
 
-d=PyRSM.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4)
+d=PyRSM_Lite.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4)
 
 # Add a cube
 d.add_cube(psf,cube, angs)
@@ -212,7 +212,7 @@ cube_empty = cube_inject_companions(cube, psf, angs, flevel=-result[0]*scaling_f
         
 # Create PyRSM class object
 
-d=PyRSM.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4)
+d=PyRSM_Lite.PyRSM(fwhm,minradius=10,maxradius=65,pxscale=pxscale_irdis,ncore=4)
 
 # Add a cube
 d.add_cube(psf,cube_empty, angs)
